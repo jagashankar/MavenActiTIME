@@ -1,0 +1,10 @@
+package popuphandle;
+
+public class Alertprompt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

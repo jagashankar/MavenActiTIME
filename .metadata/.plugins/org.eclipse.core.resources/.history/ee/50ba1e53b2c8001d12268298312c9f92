@@ -1,0 +1,41 @@
+package generics;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
+
+public class ReadDataFromExcel 
+{
+@Test
+public void readData() throws IOException 
+{
+FileInputStream fis =new FileInputStream("./Testdata/Book1 (version 1).xlsb");
+XSSFWorkbook wb= new XSSFWorkbook(fis);
+Sheet s=wb.getSheet("studentdata");
+Row r= s.getRow(2);
+Cell c=r.getCell(2);
+System.out.println(c.getStringCellValue());
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,17 @@
+package webdriver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Qspcontact {
+
+	public static void main(String[] args)
+	{
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://qspiders.com/contact");
+		System.out.println(driver.findElement(By.xpath("//p[contains(text(),'United states')]/../..//span[contains(text(),'+1')]")).getText();
+	}
+
+}
